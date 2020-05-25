@@ -1,0 +1,8 @@
+ansible-playbook ../playbook/main.yml -i ../envs/hosts
+
+#####Before run the playbook need to update few thing 
+update inventroy filr (hosts file )
+update the roles/kube8/tasks/main.yml file with required worker node ip in scp section 
+update the abosoule path of kubernet repo file .
+ if repo already set then please hash out this stanza in both kube8 as well as worker node roles file .
+
