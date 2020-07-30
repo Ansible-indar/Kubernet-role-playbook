@@ -6,9 +6,7 @@ ansible-playbook ../playbook/main.yml -i ../envs/hosts
 
 update inventroy filr (hosts file )
 
-update the roles/kube8/tasks/main.yml file with required worker node ip in scp section 
-
-update the abosoule path of kubernet repo file .
+update the playbook/main.yml file with require worker ip . Default i set 1 workernode . As per ur reqirement add mulitiple worker entry and also update kube8 role main.yml file with scp section .
 
 if repo already set then please hash out this stanza in both kube8 as well as worker node roles file .
 
