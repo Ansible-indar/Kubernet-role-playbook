@@ -59,8 +59,8 @@
   ignore_errors: yes
 
 - name: cp file to worker node
-  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; 
-#  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; scp -r /tmp/kubernet {{worker2}}:/tmp
+#  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; 
+  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; scp -r /tmp/kubernet {{worker2}}:/tmp
   tags: scp
 
 - name: verify result

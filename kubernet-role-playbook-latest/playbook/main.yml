@@ -3,8 +3,8 @@
 - hosts:
     - master
   vars:
-    worker1: "ip"
-    worker2: "ip2"
+    worker1: "10.128.15.219"
+    worker2: "10.128.15.221"
   roles:
     - kube8
 
