@@ -39,7 +39,7 @@
 
 - name: setup kubernets repo
   template:
-    src: /root/Kubernet-role-playbook/kubernet-role-playbook/kubernetes.repo
+    src: kubernetes.repo
     dest: /etc/yum.repos.d/
   tags: repo
 
@@ -59,7 +59,8 @@
   ignore_errors: yes
 
 - name: cp file to worker node
-  shell: scp -r /tmp/kubernet 10.128.0.35:/tmp/; scp -r /tmp/kubernet 10.128.0.36:/tmp
+  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; 
+#  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; scp -r /tmp/kubernet {{worker2}}:/tmp
   tags: scp
 
 - name: verify result

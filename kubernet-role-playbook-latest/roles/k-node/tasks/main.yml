@@ -40,7 +40,7 @@
 
 - name: setup kubernets repo
   template:
-    src: /root/Kubernet-role-playbook/kubernet-role-playbook/kubernetes.repo
+    src: kubernetes.repo
     dest: /etc/yum.repos.d/
   tags: repo
 
