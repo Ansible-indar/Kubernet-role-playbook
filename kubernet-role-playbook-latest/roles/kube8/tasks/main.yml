@@ -54,13 +54,13 @@
 - name: enable and restart kubelet and docker
   shell: systemctl enable kubelet docker; systemctl start kubelet docker
 
-- name: initialie kubernet
-  shell: kubeadm init >> /tmp/kubernet
-  ignore_errors: yes
+#- name: initialie kubernet
+#  shell: kubeadm init >> /tmp/kubernet
+#  ignore_errors: yes
 
 - name: cp file to worker node
-#  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; 
-  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; scp -r /tmp/kubernet {{worker2}}:/tmp
+  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/
+#  shell: scp -r /tmp/kubernet {{worker1}}:/tmp/; scp -r /tmp/kubernet {{worker2}}:/tmp
   tags: scp
 
 - name: verify result

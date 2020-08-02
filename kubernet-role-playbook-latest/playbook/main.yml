@@ -2,11 +2,13 @@
 
 - hosts:
     - master
+
   vars:
-    worker1: "10.128.15.219"
-    worker2: "10.128.15.221"
+    worker1: "10.128.0.2"
+    worker2: "10.128.15.226"
+
   roles:
-    - kube8
+   - kube8
 
 - hosts:
     - worker
