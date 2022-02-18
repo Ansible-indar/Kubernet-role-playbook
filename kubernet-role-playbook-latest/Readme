@@ -1,3 +1,10 @@
+cd workplace 
+
+Then run all below command 
+
+Ansible syntax check cmd :
+[root@ip-10-0-34-3 workplace]# ansible-playbook ../playbook/main.yml -i ../envs/hosts --syntax-check
+
 Playbook should run under workplace dir where ansible.cfg file .
 
 ansible-playbook ../playbook/main.yml -i ../envs/hosts
